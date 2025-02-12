@@ -1,0 +1,38 @@
+/*!
+ * Форма (Form).
+ *
+ * Расширение "Профили папок".
+ * Модуль "Справочники".
+ *
+ * Copyright 2015 Вeб-студия GearMagic
+ * Copyright Anton Tivonenko <anton.tivonenko@gmail.com>
+ * https://gearmagic.ru/license/
+ */
+
+/**
+ * Панель вкладок формы.
+ */
+/* Значок "Общее" */
+.gm-references-fprofiles__info-tpl { 
+    font-size: 14px;
+    color: #8b8b8b;
+ }
+ .gm-references-fprofiles__info-tpl b {
+    color: #4d82b8;
+    font-weight: normal;
+ }
+
+
+ /**
+ * Панель вкладок формы.
+ */
+/* Значок "Общее" */
+.gm-references-fprofiles__icon-common { background-image: url("../images/icon-tab-common.svg"); }
+/* Значок "Вид" */
+.gm-references-fprofiles__icon-view { background-image: url("../images/icon-tab-view.svg"); }
+/* Значок "Загрузка" */
+.gm-references-fprofiles__icon-upload { background-image: url("../images/icon-tab-upload.svg"); }
+/* Значок "Файл" */
+.gm-references-fprofiles__icon-file { background-image: url("../images/icon-tab-file.svg"); }
+/* Значок "Разрешения" */
+.gm-references-fprofiles__icon-perms { background-image: url("../images/icon-tab-perms.svg"); }
