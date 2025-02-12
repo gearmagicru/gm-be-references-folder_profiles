@@ -1,0 +1,730 @@
+[
+    {
+        "xtype": "hidden",
+        "name": "typeId",
+        "value": "@typeId"
+    },
+    {
+        "xtype": "hidden",
+        "name": "type",
+        "value": "@type"
+    },
+    {
+        "xtype": "tabpanel",
+        "activeTab": 0,
+        "ui": "flat-light",
+        "anchor": "100% 100%",
+        "autoRender": true,
+        "items": [
+            {
+                "title": "#Common",
+                "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon-m_color_tab gm-references-fprofiles__icon-common",
+                "bodyPadding": "10",
+                "autoScroll": true,
+                "layout": "anchor",
+                "defaults": {
+                    "labelWidth": 100,
+                    "labelAlign": "right"
+                },
+                "items": [
+                    {
+                        "xtype": "textfield",
+                        "name": "name",
+                        "fieldLabel": "#Name",
+                        "maxLength": 255,
+                        "anchor": "100%",
+                        "allowBlank": false
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Enabled",
+                        "checked": true,
+                        "name": "enabled",
+                        "inputValue": 1
+                    }
+                ]
+            },
+            {
+                "title": "#Permissions",
+                "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon-m_color_tab gm-references-fprofiles__icon-perms",
+                "bodyPadding": "10",
+                "autoScroll": true,
+                "layout": "anchor",
+                "defaults": {
+                    "labelWidth": 260,
+                    "labelAlign": "right"
+                },
+                "items": [
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Upload files",
+                        "checked": false,
+                        "name": "options[canUpload]",
+                        "inputValue": 1
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Download files",
+                        "checked": false,
+                        "name": "options[canDownload]",
+                        "inputValue": 1
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Delete files / folders",
+                        "checked": false,
+                        "name": "options[canDelete]",
+                        "inputValue": 1
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Create files",
+                        "checked": false,
+                        "name": "options[canCreateFile]",
+                        "inputValue": 1
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Create folders",
+                        "checked": false,
+                        "name": "options[canCreateFolder]",
+                        "inputValue": 1
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Compress files / folders",
+                        "checked": false,
+                        "name": "options[canCompress]",
+                        "inputValue": 1
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Uncompress files",
+                        "checked": false,
+                        "name": "options[canExtract]",
+                        "inputValue": 1
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Rename files / folders",
+                        "checked": false,
+                        "name": "options[canRename]",
+                        "inputValue": 1
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Edit files",
+                        "checked": false,
+                        "name": "options[canEditFile]",
+                        "inputValue": 1
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#View files",
+                        "checked": false,
+                        "name": "options[canViewFile]",
+                        "inputValue": 1
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Edit permissions",
+                        "checked": false,
+                        "name": "options[canEditPerms]",
+                        "inputValue": 1
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#View attrbiutes files / folders",
+                        "checked": false,
+                        "name": "options[canViewAttr]",
+                        "inputValue": 1
+                    }
+                ]
+            },
+            {
+                "title": "#View",
+                "tooltip": "#Folder and file display options",
+                "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon-m_color_tab gm-references-fprofiles__icon-view",
+                "bodyPadding": "10",
+                "autoScroll": true,
+                "layout": "anchor",
+                "defaults": {
+                    "labelWidth": 270,
+                    "labelAlign": "right"
+                },
+                "items": [
+                    {
+                        "xtype": "label",
+                        "ui": "note",
+                        "style": "margin: -10px -10px 10px -10px",
+                        "html": "#Folder and file display options"
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Show folders",
+                        "name": "options[showDirs]",
+                        "inputValue": 1,
+                        "checked": false
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Show files in subfolders",
+                        "name": "options[showFilesInDirs]",
+                        "inputValue": 1,
+                        "checked": false
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Show folders without access",
+                        "name": "options[showUnreadableDirs]",
+                        "inputValue": 1,
+                        "checked": false
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Show VCS files",
+                        "name": "options[showVCSFiles]",
+                        "inputValue": 1,
+                        "checked": false
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Show files and folders with a dot",
+                        "name": "options[showDotFiles]",
+                        "inputValue": 1,
+                        "checked": false
+                    },
+                    {
+                        "xtype": "checkbox",
+                        "ui": "switch",
+                        "fieldLabel": "#Show files corresponding to a folder",
+                        "name": "options[showExtFiles]",
+                        "inputValue": 1,
+                        "checked": true
+                    }
+                ]
+            },
+            {
+                "title": "#Upload",
+                "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon-m_color_tab gm-references-fprofiles__icon-upload",
+                "bodyPadding": "10",
+                "autoScroll": true,
+                "layout": "anchor",
+                "defaults": {
+                    "labelWidth": 200,
+                    "labelAlign": "right"
+                },
+                "items": [
+                    {
+                        "xtype": "label",
+                        "ui": "note",
+                        "style": "margin: -10px -10px 10px -10px",
+                        "html": [
+                            "#In the file upload parameters, you specify the rules by which a new file name will be generated in the media folder", 
+                            "#After downloading, not only the name of the downloaded file may change, but also the name of the folder"
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#File upload rules",
+                        "defaults": {
+                            "labelWidth": 250,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Check file extension",
+                                "checked": true,
+                                "name": "options[checkFileExtension]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Check MIME type of file contents",
+                                "checked": true,
+                                "name": "options[checkMimeType]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "tagfield",
+                                "fieldLabel": "#Checked file extensions",
+                                "name": "options[allowedExtensions]",
+                                "anchor": "100%",
+                                "store": {
+                                    "fields": ["mime", "name"],
+                                    "data": "@mimes"
+                                },
+                                "encodeSubmitValue": true,
+                                "displayField": "name",
+                                "valueField": "mime",
+                                "createNewOnEnter": false,
+                                "createNewOnBlur": false,
+                                "filterPickList": true,
+                                "queryMode": "local"
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#New file name after downloading it",
+                        "defaults": {
+                            "labelWidth": 250,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#File name transliteration",
+                                "checked": false,
+                                "name": "options[transliterateFilename]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Creating a unique file name",
+                                "checked": false,
+                                "name": "options[uniqueFilename]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Exclude special characters",
+                                "checked": false,
+                                "name": "options[escapeFilename]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Lowercase file name",
+                                "name": "options[lowercaseFilename]",
+                                "checked": false,
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "textfield",
+                                "fieldLabel": "#Replace special characters with",
+                                "name": "options[replaceFilenameChars]",
+                                "value": "-",
+                                "width": 350,
+                                "maxLength": 1,
+                                "minLength": 1,
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "fieldLabel": "#Maximum file name length",
+                                "name": "options[maxFilenameLength]",
+                                "minValue": 1,
+                                "maxValue": 255,
+                                "value": 255,
+                                "width": 350,
+                                "allowBlank": false
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Template for creating a folder of downloaded files",
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "options[pathTemplate]",
+                                "fieldLabel": "#Template",
+                                "labelWidth": 70,
+                                "labelAlign": "right",
+                                "anchor": "100%",
+                                "value": "{year}/{month}/{day}/{ID}",
+                                "allowBlank": true
+                            },
+                            {
+                                "xtype": "label",
+                                "cls": "gm-references-fprofiles__info-tpl",
+                                "html": [
+                                    "#Symbol in template",
+                                    "#{Year} - year number, 2 digits",
+                                    "#{year} - full numeric representation of the year, at least 4 digits",
+                                    "#{Month} - serial number of the month without a leading zero",
+                                    "#{month} - serial number of the month with a leading zero",
+                                    "#{Day} - day of the month without a leading zero",
+                                    "#{day} - day of the month, 2 digits with leading zero",
+                                    "#{ID} - identifier of the object to which the file belongs"
+                                ]
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Create a folder and move files there",
+                                "labelWidth": 250,
+                                "labelAlign": "right",    
+                                "checked": false,
+                                "name": "options[createPath]",
+                                "inputValue": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "#Image",
+                "iconCls": "g-icon-svg g-icon-svg_size_16 g-icon-m_color_tab gm-references-fprofiles__icon-file",
+                "bodyPadding": "10",
+                "autoScroll": true,
+                "layout": "anchor",
+                "defaults": {
+                    "labelWidth": 150,
+                    "labelAlign": "right"
+                },
+                "items": [
+                    {
+                        "xtype": "label",
+                        "ui": "note",
+                        "style": "margin: -10px -10px 10px -10px",
+                        "html": "#Thumbnails, images with medium and large sizes will be created after uploading, only if the сreate checkbox is selected"
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Thumbnail size",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 220,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "numberfield",
+                                "fieldLabel": "#Max. width",
+                                "tooltip": "#Maximum width in pixels",
+                                "name": "options[thumbWidth]",
+                                "minValue": 0,
+                                "value": 150,
+                                "width": 350,
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "fieldLabel": "#Max. height",
+                                "tooltip": "#Maximum height in pixels",
+                                "name": "options[thumbHeight]",
+                                "minValue": 0,
+                                "value": 150,
+                                "width": 350,
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "options[thumbSlug]",
+                                "fieldLabel": "#Slug",
+                                "tooltip": "#A slug is a unique identifier string inserted into the name of a file or folder",
+                                "maxLength": 10,
+                                "width": 350,
+                                "value": "thumb",
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Crop image to size",
+                                "checked": false,
+                                "name": "options[thumbCrop]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Add a watermark",
+                                "checked": false,
+                                "name": "options[thumbWatermark]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Create",
+                                "checked": true,
+                                "name": "options[thumbCreate]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Medium size",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 220,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "numberfield",
+                                "fieldLabel": "#Max. width",
+                                "tooltip": "#Maximum width in pixels",
+                                "name": "options[mediumWidth]",
+                                "minValue": 0,
+                                "value": 300,
+                                "width": 350,
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "fieldLabel": "#Max. height",
+                                "tooltip": "#Maximum height in pixels",
+                                "name": "options[mediumHeight]",
+                                "minValue": 0,
+                                "value": 300,
+                                "width": 350,
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "options[mediumSlug]",
+                                "fieldLabel": "#Slug",
+                                "tooltip": "#A slug is a unique identifier string inserted into the name of a file or folder",
+                                "maxLength": 10,
+                                "width": 350,
+                                "value": "medium",
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Crop image to size",
+                                "checked": false,
+                                "name": "options[mediumCrop]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Add a watermark",
+                                "checked": false,
+                                "name": "options[mediumWatermark]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Create",
+                                "checked": true,
+                                "name": "options[mediumCreate]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Large size",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 220,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "numberfield",
+                                "fieldLabel": "#Max. width",
+                                "tooltip": "#Maximum width in pixels",
+                                "name": "options[largeWidth]",
+                                "minValue": 0,
+                                "value": 1024,
+                                "width": 350,
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "fieldLabel": "#Max. height",
+                                "tooltip": "#Maximum height in pixels",
+                                "name": "options[largeHeight]",
+                                "minValue": 0,
+                                "value": 1024,
+                                "width": 350,
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "textfield",
+                                "name": "options[largeSlug]",
+                                "fieldLabel": "#Slug",
+                                "tooltip": "#A slug is a unique identifier string inserted into the name of a file or folder",
+                                "maxLength": 10,
+                                "width": 350,
+                                "value": "large",
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Crop image to size",
+                                "checked": false,
+                                "name": "options[largeCrop]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Add a watermark",
+                                "checked": false,
+                                "name": "options[largeWatermark]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Create",
+                                "checked": true,
+                                "name": "options[largeCreate]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Original size",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 220,
+                            "labelAlign": "right"
+                        },
+                        "items": [
+                            {
+                                "xtype": "numberfield",
+                                "fieldLabel": "#Max. width",
+                                "tooltip": "#Maximum width in pixels",
+                                "name": "options[originalWidth]",
+                                "minValue": 0,
+                                "value": 1024,
+                                "width": 350,
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "fieldLabel": "#Max. height",
+                                "tooltip": "#Maximum height in pixels",
+                                "name": "options[originalHeight]",
+                                "minValue": 0,
+                                "value": 1024,
+                                "width": 350,
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Crop image to size",
+                                "checked": false,
+                                "name": "options[originalCrop]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Add a watermark",
+                                "checked": false,
+                                "name": "options[originalWatermark]",
+                                "inputValue": 1
+                            },
+                            {
+                                "xtype": "checkbox",
+                                "ui": "switch",
+                                "fieldLabel": "#Apply",
+                                "checked": false,
+                                "name": "options[originalApply]",
+                                "inputValue": 1
+                            }
+                        ]
+                    },
+                    {
+                        "xtype": "fieldset",
+                        "title": "#Watermark",
+                        "collapsible": true,
+                        "defaults": {
+                            "labelWidth": 220,
+                            "labelAlign": "right"
+                            
+                        },
+                        "items": [
+                            {
+                                "xtype": "textfield",
+                                "name": "options[watermarkFile]",
+                                "fieldLabel": "#Filename",
+                                "tooltip": "#Filename watermak",
+                                "anchor": "100%",
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "sliderfield",
+                                "name": "options[watermarkOpacity]",
+                                "fieldLabel": "#Opacity",
+                                "increment": 1,
+                                "minValue": 0,
+                                "maxValue": 100,
+                                "anchor": "100%"
+                            },
+                            {
+                                "xtype": "combo",
+                                "name": "options[watermarkPosition]",
+                                "fieldLabel": "#Position",
+                                "store": {
+                                    "fields": ["id", "name"],
+                                    "data": [
+                                        {"id": "left|bottom", "name": "#Left bottom"},
+                                        {"id": "left|west", "name": "#Left center"},
+                                        {"id": "left|top", "name": "#Left top"},
+                                        {"id": "right|top", "name": "#Right top"},
+                                        {"id": "right|east", "name": "#Right center"},
+                                        {"id": "right|bottom", "name": "#Right bottom"},
+                                        {"id": "center", "name": "#Center"},
+                                        {"id": "bottom|center", "name": "#Bottom center"},
+                                        {"id": "top|center", "name": "#Top center"}
+                                    ]
+                                },
+                                "editable": false,
+                                "queryMode": "local",
+                                "displayField": "name",
+                                "valueField": "id",
+                                "allowBlank": false
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "fieldLabel": "#Offset X",
+                                "name": "options[watermarkOffsetX]",
+                                "width": 350,
+                                "allowBlank": true
+                            },
+                            {
+                                "xtype": "numberfield",
+                                "fieldLabel": "#Offset Y",
+                                "name": "options[watermarkOffsetY]",
+                                "width": 350,
+                                "allowBlank": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
